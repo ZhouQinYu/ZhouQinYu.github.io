@@ -1,0 +1,16 @@
+[user]
+	name = ZhouQinYu
+	email = zqy1619637919@vip.qq.com
+[core]
+	editor = emacsclient
+[lfs]
+	url =  http://devcenter.bj.**.com/api/v1/lfs/
+[credential]
+	helper = store
+[winUpdater]
+	recentlySeenVersion = 2.27.0.windows.1
+[filter "lfs"]
+	clean = git-lfs clean -- %f
+	smudge = git-lfs smudge -- %f
+	process = git-lfs filter-process
+	required = true
