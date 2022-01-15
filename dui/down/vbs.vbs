@@ -1,0 +1,23 @@
+Set ws = CreateObject("Wscript.Shell")
+Wscript.sleep 800
+ws.SendKeys "3"
+Wscript.sleep 100
+ws.SendKeys "5"
+Wscript.sleep 200
+ws.SendKeys "{ENTER}"
+Wscript.sleep 8000
+ws.SendKeys "f"
+Wscript.sleep 100
+ws.SendKeys "o"
+Wscript.sleep 100
+ws.SendKeys "r"
+Wscript.sleep 100
+ws.SendKeys "e"
+Wscript.sleep 100
+ws.SendKeys "v"
+Wscript.sleep 100
+ws.SendKeys "e"
+Wscript.sleep 100
+ws.SendKeys "r"
+Wscript.sleep 100
+ws.SendKeys "{Enter}"
