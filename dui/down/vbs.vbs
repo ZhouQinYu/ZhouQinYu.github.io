@@ -23,7 +23,7 @@ ws.SendKeys "e"
 Wscript.sleep 100
 ws.SendKeys "r"
 Wscript.sleep 100
-ws.SendKeys ""
+ws.SendKeys " "
 Wscript.sleep 100
 ws.SendKeys "{Enter}"
 Wscript.sleep 8800
