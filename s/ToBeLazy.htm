@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="UTF-8">
+    <title>新年快乐~</title>
+    <link type="text/css" rel="stylesheet" href="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/style.css">
+    <script src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/hm.js"></script><script>
+        //判断客户端设备，选择写入meta
+        function init_viewport() {
+            if (navigator.userAgent.indexOf('Android') != -1) {
+                var version = parseFloat(RegExp.$1);
+                if (version > 2.3) {
+                    var width = window.outerWidth == 0 ? window.screen.width : window.outerWidth;
+                    var phoneScale = parseInt(width) / 500;
+                    document.write('<meta name="viewport" content="width=500, minimum-scale = ' + phoneScale + ', maximum-scale = ' + phoneScale + ', target-densitydpi=device-dpi">');
+                } else {
+                    document.write('<meta name="viewport" content="width=500, target-densitydpi=device-dpi, user-scalable=0">');
+                }
+            } else if (navigator.userAgent.indexOf('iPhone') != -1) {
+                var phoneScale = parseInt(window.screen.width) / 500;
+                document.write('<meta name="viewport" content="width=500, min-height=750, initial-scale=' + phoneScale + ', maximum-scale=' + phoneScale + ', user-scalable=0" /> ');         //0.75   0.82
+            } else {
+                document.write('<meta name="viewport" content="width=500, height=750, initial-scale=0.64" /> '); //0.75  0.82
+            }
+        }
+        init_viewport();
+    </script><meta name="viewport" content="width=500, height=750, initial-scale=0.64"> 
+    <style>body{ margin:0 auto;}#div_is_inner{background: rgba(255,255,255,0.99);}</style>
+    
+</head>
+
+<body style="overflow-x:hidden;overflow-y:hidden;">
+
+<!--<script src="/template/wenan/js/jquery-2.0.3.min.js"></script>-->
+<script src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/jquery.min.js"></script>
+
+<div id="div_container">
+    <!-- 最外层div，用于居中兼容PC和移动 -->
+    <div id="div_start_bg"></div> <!-- 用于遮挡主题，作为片头的背景 -->
+    <!-- 按需加载，选择此片头时方才加载 -->
+    <div id="div_intersect" style="display: block; height: 916px; background-image: url(&quot;https://t2.picb.cc/2022/12/04/6Kcl8u.jpg&quot;);">
+        <!-- 用于设置背景 -->
+        <div id="div_is_inner">
+            <!-- 用于存放content -->
+            <div class="div_is_open_bg">
+                <div class="div_is_open_btn" onclick="start()" style="background-image: url(http://20it.cn/template/wenan/images/open_letter.jpg);"></div>
+            </div>
+
+            <!-- 打字在这里 -->
+            <div class="div_is_typed">
+                <div id="div_is_img">
+                    <img class="img_is_typed" src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/6KciTd.gif">
+                </div>
+                <span id="span_is_typed"><!--<b id="title">新年快乐~</b>-->
+						<div id="box" style="text-align:left;">
+                           倒计时还有9天2023，提前祝你新年快乐！接龙哈！发给你最好的几个朋友，超过1个就永远幸福，不许在你这里断了。<br>今天必须发完，不许偷懒。想起谁，发给谁，包括我，别小气  ，如果我不是你的朋友，你也可以不发。						</div>
+
+                </span>
+            </div>
+        </div>
+    </div>
+    <script>
+        var aaa = $(document).height() +2;
+
+        $("#div_intersect").css("height",aaa + "px");
+    </script>
+    <div id="div_hearttree">
+        <div id="div_tree_error">很可惜你的手机浏览器不支持，错过了惊喜效果哦</div>
+        <div id="div_tree_start"></div>
+        <div id="div_tree_main">
+            <div id="div_tree_text">
+                <span id="span_tree_typed"></span>
+            </div>
+            <canvas id="canvas_tree" width="500" height="815"></canvas>
+            <div id="div_tree_timer">
+                <span id="span_tree_desc"></span>
+                <div id="div_tree_interval"></div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div id="div_btn_container">
+        <!-- 按钮部分的最外层，处于文档流之中 -->
+        <div id="div_btn_inner">
+            <!-- 按钮部分内层，用于定位 -->
+
+            <div class="div_music_tips"></div>
+            <div class="div_btn" id="div_music" onclick="music_switch()">
+                <!--<img id='img_music' src='././images/music_note_big.png' style='-webkit-animation:music_play_rotate 1s linear infinite'>-->
+                <audio id="audio_music" autoplay="autoplay" preload="auto" loop="">
+                    <source src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/55b4c0e485a2c608a292158cb02c2610.mp3" type="audio/mpeg">
+                    <embed id="main_audio_ie8" autostart="true" loop="true" src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/55b4c0e485a2c608a292158cb02c2610.mp3" autoplay="autoplay" width="0" hidden="true" height="0">
+                </audio>
+            </div>
+            
+                        <div class="div_btn" id="btn-make">
+                <a id="moreLink" href="http://20it.cn/jump.php"><span>制作</span></a>
+            </div>
+            <div class="div_btn" id="div_support">
+                <a id="moreLink" href="https://mp.weixin.qq.com/s/V7h63JZbgux7WcZ4ZgtO8A"><span>更多</span></a>
+            </div>
+            <div class="div_btn" id="div_wph" style="bottom: 70px; right: 35px; ">
+                <a href="https://mst.vip.com/iYcEvwVGaLI-Bf_5PtVKAQ.php?wq=1&amp;wapid=mst_100041464&amp;_src=mst&amp;extra_banner=115041464&amp;nova=1&amp;nova_platform=1&amp;mst_page_type=guide" target="_blank"><img src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/banner.png" width="50px" height="50px"></a>
+            </div>
+            
+            
+        </div>
+    </div>
+    
+</div>
+
+<script src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/typeit.min.js"></script>
+
+<script src="%E6%96%B0%E5%B9%B4%E5%BF%AB%E4%B9%90~_files/su.js"></script>
+
+<script type="text/javascript">
+
+    var id = "220770";
+
+    function start(){
+        $(".div_is_open_bg").hide();
+        $(".div_is_typed").show();
+        audioAutoPlay('audio_music');
+
+        new TypeIt('#box', {
+            lifeLike: true,
+            cursorSpeed: 800,
+            waitUntilVisible: true,
+            speed: 170
+        }).go();
+
+        $('body').wpSuperSnow({
+            flakes: ['/template/wenan/images/004.png', '/template/wenan/images/003.png', '/template/wenan/images/002.png',
+                '/template/wenan/images/001.png'
+            ],
+            totalFlakes: '50',
+            zIndex: '999999',
+            maxSize: '28',
+            maxDuration: '20',
+            useFlakeTrans: false
+        });
+
+    }
+
+    function audioAutoPlay(id){
+        var audio = document.getElementById(id),
+            play = function(){
+                audio.play();
+                document.removeEventListener("touchstart",play, false);
+            };
+        audio.play();
+        document.addEventListener("WeixinJSBridgeReady", function () {
+            play();
+        }, false);
+        document.addEventListener('YixinJSBridgeReady', function() {
+            play();
+        }, false);
+        document.addEventListener("touchstart",play, false);
+    }
+    
+    $(function(){
+        audioAutoPlay('audio_music');
+        $.get("https://ai8.top/api/addViews?id=220770");
+    });
+    
+
+</script>
+<!--
+<script src="https://lib.baomitu.com/clipboard.js/2.0.8/clipboard.min.js"></script>
+<script type="text/javascript">
+    /*
+    var clipboard = new ClipboardJS('body', {
+        text: function() {
+            return "0.00 HVL:/ “我的月亮 永悬不落 我的爱意 至死不渝” %治愈 %流星雨许愿   https://v.douyin.com/Nrw4hkY/ 复制此链接，打开Dou音搜索，直接观看视频！0.00 HVL:/ “我的月亮 永悬不落 我的爱意 至死不渝” %治愈 %流星雨许愿   https://v.douyin.com/Nrw4hkY/ 复制此链接，打开Dou音搜索，直接观看视频！";
+        }
+    });
+    */
+</script>
+-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "https://hm.baidu.com/hm.js?c314395e62fb55e30828e0ea8cca8b3a";
+  var s = document.getElementsByTagName("script")[0]; 
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+</body></html>
